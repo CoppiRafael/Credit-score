@@ -83,46 +83,46 @@ python
 from sklearn.model_selection import train_test_split
 from sklearn import metrics´´´
 
-# Carregar os dados
+### Carregar os dados
 ´´´df = pd.read_csv('demo01.csv')´´´
 
-# Divisão dos dados em treino e teste
+### Divisão dos dados em treino e teste
 ´´´
 x = df.drop("mau", axis=1)
 y = df["mau"]
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.3, random_state=42)´´´
 
-# Treinamento do modelo Random Forest
+### Treinamento do modelo Random Forest
 ´´´
 clf = RandomForestClassifier(n_estimators=100)
 clf.fit(x_train, y_train)´´´
 
-# Avaliação do modelo
+### Avaliação do modelo
 ´´´
 y_pred = clf.predict(x_test)
 acc = metrics.accuracy_score(y_test, y_pred)
 print('Acurácia: {0:.2f}%'.format(acc*100))´´´
 
-# Avaliação
+### Avaliação
 A avaliação do modelo é realizada através da acurácia, mas futuros projetos podem incluir métricas adicionais para avaliar o impacto do modelo no negócio.
 
-# Implantação
+### Implantação
 Na etapa final, colocamos o modelo em produção, implementando-o em um sistema que automatiza a aprovação ou rejeição de proponentes de cartão de crédito com base no risco de inadimplência.
 
-# Tecnologias Utilizadas
+## Tecnologias Utilizadas
 - Python
 - Pandas
 - Seaborn
 - Matplotlib
 - Scikit-learn
 
-# Como Executar o Projeto
+## Como Executar o Projeto
 Clone este repositório:´´´ git clone https://github.com/seu-usuario/seu-projeto.git´´´
 Navegue até o diretório do projeto: ´´´cd seu-projeto´´´
 Instale as dependências: ´´´pip install -r requirements.txt´´´
 Execute o notebook Jupyter:´´´ jupyter notebook´´´
 
-# Contribuições: 
+### Contribuições: 
 Contribuições são bem-vindas! Por favor, envie um pull request ou abra uma issue para discutirmos melhorias.
 
 
